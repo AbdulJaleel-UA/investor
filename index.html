@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coming Soon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investor Market - UAE</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
     }
 
     .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
       text-align: center;
-      flex-direction: column;
-      color: #333;
+      animation: fadeIn 2s ease-out;
     }
 
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 3em;
+      background: linear-gradient(90deg, #ff6a00, #ffcc00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideUp 1.5s ease-out;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2em;
-      color: #777;
+      font-size: 1.5em;
+      color: #f0f0f0;
+      animation: slideUp 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Optional glowing ring */
+    .glow-circle {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 80%);
+      animation: pulse 5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.1); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 0.4; }
     }
   </style>
 </head>
 <body>
+  <div class="glow-circle"></div>
   <div class="container">
     <h1>Welcome to the world of opportunities</h1>
     <p>Stay Tuned</p>
